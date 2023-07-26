@@ -13,7 +13,8 @@ const user_token = async(req,res,next)=>{
         if(userdata == undefined){
             res.json({message:'token invalid'})
         } else {
-            var data = await userschema.findById(userdata.userid)
+            console.log(userdata);
+            var data = await userschema.findById(userdata.id)
             if(data == null){
                 res.json({message:'data not found'})
             } else {
