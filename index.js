@@ -12,6 +12,7 @@ require('dotenv').config()
 app.use(cors())
 
 app.use('/user',require('./router/user.router'))
+app.use('/admin',require('./router/admin.router'))
 
 
 app.listen(port,(err)=>{
